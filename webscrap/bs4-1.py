@@ -1,17 +1,6 @@
-""" 웹스크래핑 샘플
-from bs4 import *
-import requests
-    
-url = "https://dhlottery.co.kr/gameResult.do?method=byWin&wiselog=H_C_1_1"
-req = requests.get(url)
-soup = BeautifulSoup(req.text, "html.parser")
-txt = soup.find("div", attrs = {"class", "win_result"}).get_text()
-result = txt.split("\n")
-#print(len(result), result, result[7:13], result[19])
-print("{0} 번호 {1}입니다. 보너스 번호는 {2}입니다.".format(result[1], result[7:13], result[17]))
-"""
+""" Debt and rate -> Weighted average rate)
+가중 평균금리 비교를 위한 코드 -> 파이썬 구조체 형식으로 변경해봄. 
 
-"""
 HumanA = 20000000
 HumanB = 45000000
 HumanC = 25000000
